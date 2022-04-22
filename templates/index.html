@@ -32,18 +32,25 @@
               <ul class="links">
                 <li><a href="http://127.0.0.1:5000/">Home</a></li>
                 <li><a href="http://127.0.0.1:5000/about">About</a></li>
+              
+                
                 <li>
-                  <a href="http://127.0.0.1:5000/" class="desktop-link">Tests</a>
+                  <a href="http://127.0.0.1:5000/" class="desktop-link">Rapid Test</a>
                   <input type="checkbox" id="show-features">
-                  <label for="show-features">Tests</label>
+                  <label for="show-features">Rapid Test</label>
                   <ul>
-                    <li><a href="http://127.0.0.1:5000/rapidtest">Rapid Test</a></li>
-                    <li><a href="http://127.0.0.1:5000/advancedtest">Advanced Test</a></li>               
+                    <li><a href="http://127.0.0.1:5000/adultstest">For Adults</a></li>
+                    <li><a href="http://127.0.0.1:5000/childtest">For Children</a></li>               
                   </ul>
                 </li>
+                <li><a href="http://127.0.0.1:5000/advancedtest">Advanced Test</a></li> 
+                <li><a href="http://127.0.0.1:5000/labtest">Lab Test</a></li> 
                 <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
                 <li><a href="http://127.0.0.1:5000/hiw">How it Works</a></li>
+                <li><a href="http://127.0.0.1:5000/blog">Blogs</a></li>
                 <li><a href="http://127.0.0.1:5000/faq">FAQ</a></li>
+          
+
               </ul>
             </div>
           </nav>
@@ -69,7 +76,7 @@
           Sepsis may progress to septic shock. This is a dramatic drop in blood
           pressure that can lead to severe organ problems and death.
         </p>
-        <a href="http://127.0.0.1:5000/rapidtest" class="btn">Protect now</a>
+        <a href="http://127.0.0.1:5000/adultstest" class="btn">Protect now</a>
       </div>
 
       <div class="image">
@@ -81,47 +88,7 @@
     <!--test section starts-->
 
     <!--test section ends-->
-    <!-- home section ends -->
-<!-- 
-    <section class="protect" id="protect">
-      <h1 class="heading">Take steps to <span>protect</span> yourself</h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img src="./static/images/protect-1.png" alt="" />
-          <h3>Wear A Face Mask</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ab
-            magni consequatur, quae in repellat. Placeat deserunt vitae alias
-            dignissimos!
-          </p>
-          <a href="#" class="btn">learn more</a>
-        </div>
-
-        <div class="box">
-          <img src="./static/images/protect-2.png" alt="" />
-          <h3>Wash Your Hands</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ab
-            magni consequatur, quae in repellat. Placeat deserunt vitae alias
-            dignissimos!
-          </p>
-          <a href="#" class="btn">learn more</a>
-        </div>
-
-        <div class="box">
-          <img src="./static/images/protect-3.png" alt="" />
-          <h3>Avoid Close Contact</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ab
-            magni consequatur, quae in repellat. Placeat deserunt vitae alias
-            dignissimos!
-          </p>
-          <a href="#" class="btn">learn more</a>
-        </div>
-      </div>
-    </section> -->
-
+   
     <!-- symtoms section starts  -->
 
     <div class="symtoms" id="symtoms">
@@ -277,7 +244,13 @@
 
     <!-- About end-->
     <!-- contact section starts  -->
-
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="about-video">
+      <iframe width="650" height="420" src="https://www.youtube.com/embed/6NdLnHbLZMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <section class="contact" id="contact">
       <h1 class="heading1"><span>Contact</span> Us</h1>
 
@@ -300,7 +273,6 @@
           <p>mumbai, india - 400104</p>
         </div>
       </div>
-
       <div class="row">
         <iframe
           class="map"
@@ -309,19 +281,20 @@
           loading="lazy"
         ></iframe>
 
-        <form action="">
-          <input type="text" placeholder="name" class="box" />
-          <input type="email" placeholder="email" class="box" />
-          <input type="number" placeholder="number" class="box" />
+        <form action="https://formspree.io/f/myyonzpe" method="POST">
+         
+          <input type="text" name="Name" placeholder="Name" class="box" required/>
+          <input type="email" name="Email" placeholder="Email" class="box" required/>
+          <input type="number" name="Number" placeholder="Number" class="box" required />
           <textarea
-            name=""
-            placeholder="message"
+            name="Text"
+            placeholder="Message"
             class="box"
             id=""
             cols="30"
             rows="10"
-          ></textarea>
-          <input type="submit" value="send message" class="btn" />
+            required></textarea>
+          <input type="submit" value="Send Message" class="btn" />
         </form>
       </div>
     </section>
@@ -363,7 +336,7 @@
           <h3>Contact info</h3>
           <p><i class="fas fa-phone"></i> +123-456-7890.</p>
           <p><i class="fas fa-envelope"></i> example@gmail.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> mumbai, indai - 400104.</p>
+          <p><i class="fas fa-map-marker-alt"></i> mumbai, india - 400104.</p>
           <!-- <div class="share">
             <a href="#" class="fab fa-youtube"></a>
             <a href="#" class="fab fa-facebook-f"></a>

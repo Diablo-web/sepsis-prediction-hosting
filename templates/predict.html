@@ -1,0 +1,255 @@
+<!-- This is GUI for Heart disease Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="htmlcss bootstrap, multi level menu, submenu, treeview nav menu examples" />
+  <title>Sepsis Prediction Website ML API </title>
+   
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="./static/css/style.css">
+  <!-- <link rel="stylesheet" href="./static/css/blog.css"> -->
+  <link rel="stylesheet" href="./static/css/predict.css">
+
+  <!-- <style>
+    /* CSS code for button */
+    body {
+      background-image: url('static/images/project.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style> -->
+
+</head>
+
+<body>
+
+  <header>
+    <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search">
+          <input type="checkbox" id="show-menu"> 
+          <label for="show-menu" class="menu-icon" id="menu"><i class="fas fa-bars"></i></label>
+          <div class="content">
+          <div class="logo"><a href="http://127.0.0.1:5000/">Sepsis</a></div>
+            <ul class="links">
+              <li><a href="http://127.0.0.1:5000/">Home</a></li>
+              <li><a href="http://127.0.0.1:5000/about">About</a></li>
+              <li>
+                <a href="http://127.0.0.1:5000/" class="desktop-link">Rapid Test</a>
+                <input type="checkbox" id="show-features">
+                <label for="show-features">Rapid Test</label>
+                <ul>
+                  <li><a href="http://127.0.0.1:5000/adultstest">For Adults</a></li>
+                  <li><a href="http://127.0.0.1:5000/childtest">For Children</a></li>               
+                </ul>
+              </li>
+              <li><a href="http://127.0.0.1:5000/advancedtest">Advanced Test</a></li> 
+              <li><a href="http://127.0.0.1:5000/labtest">Lab Test</a></li> 
+              <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
+              <li><a href="http://127.0.0.1:5000/hiw">How it Works</a></li>
+              <li><a href="http://127.0.0.1:5000/blog">Blogs</a></li>
+              <li><a href="http://127.0.0.1:5000/faq">FAQ</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    
+</header>
+
+<!-- header section ends -->
+ 
+ 
+ <section class="advancedform">
+	
+    <!-- Get input for predict the  heart disease -->
+    <div class="title_advanced">
+      <h1>ADVANCED TEST</h1>  
+      <!-- <h3>Enter the value of features :</h3> -->
+    </div>
+  
+        
+    <form action="{{ url_for('predict')}}" method="post">
+  
+       
+
+        <br>
+        <br>
+        <br>
+        <br>
+        
+   
+          <!-- Show predicted output using ML model --> 
+         <div class="textmsg"> 
+              <h2>{{ prediction_text }}</h2>  
+        <br>
+        <br>
+       
+        </div>
+        <h1 style="text-transform: uppercase; color: #4b4b4b; border-bottom: 1px solid #4b4b4b;;" class="blog-heading">Prominent Hospitals treating Sepsis</h1>
+    <div class="blogs-container">
+      <div class="blog">
+        <!-- <img src="./static/images/blog3.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">Saturday, 21 Sept 2019. By Neetu Chandra Sharma</p> -->
+        <a href="https://www.google.com/maps/place/Tata+Memorial+Hospital/@18.9972135,72.8366812,20z/data=!4m5!3m4!1s0x3be7cf5cb4cef931:0xa39dd0076d8dbb5e!8m2!3d18.9976573!4d72.8375932?hl=en" class="location">Mumbai</a>
+        <img src="./static/images/tata-hospital.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/Tata+Memorial+Hospital/@18.9972135,72.8366812,20z/data=!4m5!3m4!1s0x3be7cf5cb4cef931:0xa39dd0076d8dbb5e!8m2!3d18.9976573!4d72.8375932?hl=en" class="hospital-name">Tata Memorial Hospital</a>
+        <p class="address">Dr. E Borges Road, Parel, Mumbai, Maharashtra 400012</p>
+        <a href="https://www.google.com/maps/place/Tata+Memorial+Hospital/@18.9972135,72.8366812,20z/data=!4m5!3m4!1s0x3be7cf5cb4cef931:0xa39dd0076d8dbb5e!8m2!3d18.9976573!4d72.8375932?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+      
+      <div class="blog">
+        <!-- <img src="./static/images/symptoms.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">10 Aug 2018, By Sepsis Alliance</p> -->
+        <a href="https://www.google.com/maps/place/Wockhardt+Hospitals,+Mumbai+Central/@19.1297128,72.7655518,11z/data=!4m9!1m2!2m1!1swockhardt+hospital!3m5!1s0x3be7ce689ca59091:0x2cc84b316383c1c1!8m2!3d18.9752117!4d72.8238875!15sChJ3b2NraGFyZHQgaG9zcGl0YWwiA4gBAVoUIhJ3b2NraGFyZHQgaG9zcGl0YWySARBwcml2YXRlX2hvc3BpdGFsmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVI1TjNSaVZteG5SUkFCsAEA?hl=en" class="location">Mumbai</a>
+        <img src="./static/images/wockhardt.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/Wockhardt+Hospitals,+Mumbai+Central/@19.1297128,72.7655518,11z/data=!4m9!1m2!2m1!1swockhardt+hospital!3m5!1s0x3be7ce689ca59091:0x2cc84b316383c1c1!8m2!3d18.9752117!4d72.8238875!15sChJ3b2NraGFyZHQgaG9zcGl0YWwiA4gBAVoUIhJ3b2NraGFyZHQgaG9zcGl0YWySARBwcml2YXRlX2hvc3BpdGFsmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVI1TjNSaVZteG5SUkFCsAEA?hl=en" class="hospital-name">Wockhardt Hospital</a>
+        <p class="address">1877, Doctor Anandrao Nair Marg, Near Agripada Police Station, Mumbai Central East, Mumbai, Maharashtra 400011</p>
+        <a href="https://www.google.com/maps/place/Wockhardt+Hospitals,+Mumbai+Central/@19.1297128,72.7655518,11z/data=!4m9!1m2!2m1!1swockhardt+hospital!3m5!1s0x3be7ce689ca59091:0x2cc84b316383c1c1!8m2!3d18.9752117!4d72.8238875!15sChJ3b2NraGFyZHQgaG9zcGl0YWwiA4gBAVoUIhJ3b2NraGFyZHQgaG9zcGl0YWySARBwcml2YXRlX2hvc3BpdGFsmgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVVI1TjNSaVZteG5SUkFCsAEA?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+
+      <div class="blog">
+        <!-- <img src="./static/images/blog2.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">Friday, 4 April 2017. By Shiv Kumar, HNN Team</p> -->
+        <a href="https://www.google.com/maps/place/BLK-Max+Super+Speciality+Hospital/@28.6435063,77.1752151,17z/data=!4m13!1m7!3m6!1s0x390d029632b02999:0x2301ea92ede1b69b!2sBLK+HOSPITAL,+BLK+CHILDREN+HEART+INSTITUTE,+Radha+Soami+Satsang,+Karol+Bagh,+Delhi,+110005!3b1!8m2!3d28.6435064!4d77.1796998!3m4!1s0x390d029633b6af21:0x9a67323b63bcc188!8m2!3d28.6433105!4d77.1796932?hl=en" class="location">Delhi</a>
+        <img src="./static/images/blk.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/BLK-Max+Super+Speciality+Hospital/@28.6435063,77.1752151,17z/data=!4m13!1m7!3m6!1s0x390d029632b02999:0x2301ea92ede1b69b!2sBLK+HOSPITAL,+BLK+CHILDREN+HEART+INSTITUTE,+Radha+Soami+Satsang,+Karol+Bagh,+Delhi,+110005!3b1!8m2!3d28.6435064!4d77.1796998!3m4!1s0x390d029633b6af21:0x9a67323b63bcc188!8m2!3d28.6433105!4d77.1796932?hl=en" class="hospital-name">BLK Hospital</a>
+        <p class="address">Building No-5, Pusa Road, Rajinder Nagar, New Delhi, Delhi 110005</p>
+        <a href="https://www.google.com/maps/place/BLK-Max+Super+Speciality+Hospital/@28.6435063,77.1752151,17z/data=!4m13!1m7!3m6!1s0x390d029632b02999:0x2301ea92ede1b69b!2sBLK+HOSPITAL,+BLK+CHILDREN+HEART+INSTITUTE,+Radha+Soami+Satsang,+Karol+Bagh,+Delhi,+110005!3b1!8m2!3d28.6435064!4d77.1796998!3m4!1s0x390d029633b6af21:0x9a67323b63bcc188!8m2!3d28.6433105!4d77.1796932?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+
+      <div class="blog">
+        <!-- <img src="./static/images/blog3.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">Friday, 13 Sept 2021. By Runa Gokhale, MD. MPH </p> -->
+        <a href="https://www.google.com/maps/place/Apollo+Hospital+Chennai/@13.0631824,80.1114618,12z/data=!4m9!1m2!2m1!1sapollo+hospital+chennai!3m5!1s0x3a52666accdfbb59:0x2e0d1b10a5e06d2f!8m2!3d13.0631824!4d80.2515375!15sChdhcG9sbG8gaG9zcGl0YWwgY2hlbm5haSIDiAEBWhkiF2Fwb2xsbyBob3NwaXRhbCBjaGVubmFpkgEIaG9zcGl0YWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTTJNMTk1V1RkM1JSQUKwAQA?hl=en" class="location">Chennai</a>
+        <img src="./static/images/apollo.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/Apollo+Hospital+Chennai/@13.0631824,80.1114618,12z/data=!4m9!1m2!2m1!1sapollo+hospital+chennai!3m5!1s0x3a52666accdfbb59:0x2e0d1b10a5e06d2f!8m2!3d13.0631824!4d80.2515375!15sChdhcG9sbG8gaG9zcGl0YWwgY2hlbm5haSIDiAEBWhkiF2Fwb2xsbyBob3NwaXRhbCBjaGVubmFpkgEIaG9zcGl0YWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTTJNMTk1V1RkM1JSQUKwAQA?hl=en" class="hospital-name">Apollo Hospital</a>
+        <p class="address">No. 134, Mint Street, Opposite Ramar Temple, Sowcarpet, Chennai, Tamil Nadu 600079, India</p>
+        <a href="https://www.google.com/maps/place/Apollo+Hospital+Chennai/@13.0631824,80.1114618,12z/data=!4m9!1m2!2m1!1sapollo+hospital+chennai!3m5!1s0x3a52666accdfbb59:0x2e0d1b10a5e06d2f!8m2!3d13.0631824!4d80.2515375!15sChdhcG9sbG8gaG9zcGl0YWwgY2hlbm5haSIDiAEBWhkiF2Fwb2xsbyBob3NwaXRhbCBjaGVubmFpkgEIaG9zcGl0YWyaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTTJNMTk1V1RkM1JSQUKwAQA?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+
+      <div class="blog">
+        <!-- <img src="./static/images/symptoms.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">September 11, 2020 by CDC's Safe Healthcare</p> -->
+        <a href="https://www.google.com/maps/place/Manipal+Hospital/@12.9170883,77.451729,12z/data=!4m9!1m2!2m1!1smanipal+hospital+banglore!3m5!1s0x3bae13c0c0c6206b:0x12d8d4c39197c7dd!8m2!3d12.9583911!4d77.6488364!15sChltYW5pcGFsIGhvc3BpdGFsIGJhbmdsb3JlIgOIAQFaGyIZbWFuaXBhbCBob3NwaXRhbCBiYW5nbG9yZZIBCGhvc3BpdGFssAEA?hl=en" class="location">Banglore</a>
+        <img src="./static/images/manipal.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/Manipal+Hospital/@12.9170883,77.451729,12z/data=!4m9!1m2!2m1!1smanipal+hospital+banglore!3m5!1s0x3bae13c0c0c6206b:0x12d8d4c39197c7dd!8m2!3d12.9583911!4d77.6488364!15sChltYW5pcGFsIGhvc3BpdGFsIGJhbmdsb3JlIgOIAQFaGyIZbWFuaXBhbCBob3NwaXRhbCBiYW5nbG9yZZIBCGhvc3BpdGFssAEA?hl=en" class="hospital-name">Manipal Hospital</a>
+        <p class="address">Manipal Hospital 98, HAL Airport road, Bangalore - 560 017</p>
+        <a href="https://www.google.com/maps/place/Manipal+Hospital/@12.9170883,77.451729,12z/data=!4m9!1m2!2m1!1smanipal+hospital+banglore!3m5!1s0x3bae13c0c0c6206b:0x12d8d4c39197c7dd!8m2!3d12.9583911!4d77.6488364!15sChltYW5pcGFsIGhvc3BpdGFsIGJhbmdsb3JlIgOIAQFaGyIZbWFuaXBhbCBob3NwaXRhbCBiYW5nbG9yZZIBCGhvc3BpdGFssAEA?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+      <div class="blog">
+        <!-- <img src="./static/images/symptoms.png" class="blog-media" /> -->
+        <!-- <p class="blog-date">September 8, 2015 by CDC's Safe Healthcare</p> -->
+        <a href="https://www.google.com/maps/place/Fortis+Memorial+Research+Institute,+Gurugram/@28.4575831,77.0563443,15z/data=!4m9!1m2!2m1!1sfortis+hospital+gurgaon!3m5!1s0x390d18eee1cf57b3:0x196fa672df1399d4!8m2!3d28.4575831!4d77.0738538!15sChdmb3J0aXMgaG9zcGl0YWwgZ3VyZ2FvbiIDiAEBWhkiF2ZvcnRpcyBob3NwaXRhbCBndXJnYW9ukgEIaG9zcGl0YWywAQA?hl=en" class="location">Gurgaon</a>
+        <img src="./static/images/fortis.jpg" class="hospital-media" />
+        <a href="https://www.google.com/maps/place/Fortis+Memorial+Research+Institute,+Gurugram/@28.4575831,77.0563443,15z/data=!4m9!1m2!2m1!1sfortis+hospital+gurgaon!3m5!1s0x390d18eee1cf57b3:0x196fa672df1399d4!8m2!3d28.4575831!4d77.0738538!15sChdmb3J0aXMgaG9zcGl0YWwgZ3VyZ2FvbiIDiAEBWhkiF2ZvcnRpcyBob3NwaXRhbCBndXJnYW9ukgEIaG9zcGl0YWywAQA?hl=en" class="hospital-name">Fortis Hospital</a>
+        <p class="address">Fortis Hospital, Sector 62, Phase - VIII, Mohali - 160062, Punjab</p>
+        <a href="https://www.google.com/maps/place/Fortis+Memorial+Research+Institute,+Gurugram/@28.4575831,77.0563443,15z/data=!4m9!1m2!2m1!1sfortis+hospital+gurgaon!3m5!1s0x390d18eee1cf57b3:0x196fa672df1399d4!8m2!3d28.4575831!4d77.0738538!15sChdmb3J0aXMgaG9zcGl0YWwgZ3VyZ2FvbiIDiAEBWhkiF2ZvcnRpcyBob3NwaXRhbCBndXJnYW9ukgEIaG9zcGl0YWywAQA?hl=en" class="open-maps">Open in Maps...</a>
+      </div>
+      
+
+
+
+
+
+    </div>
+        
+         <!-- <div id="map"></div> -->
+
+  
+   <br>
+   <br>
+   <br>
+
+      <!-- </div> -->
+</section>
+<!-- footer section starts  -->
+
+<section class="footer">
+
+  <div class="box-container">
+
+      <!-- <div class="box">
+          <h3>About us</h3>
+          <p></p>
+      </div> -->
+
+      <!-- <div class="box">
+          <h3>locations</h3>
+          <a href="#">Mumbai</a>
+          <a href="#">pune</a>
+          <a href="#">chennai</a>
+          <a href="#">bangalore</a>
+          <a href="#">hyderabad</a>
+          <a href="#">new delhi</a>
+      </div> -->
+
+      <div class="box">
+          <h3>Quick links</h3>
+          <a href="#">home</a>
+          <!-- <a href="#">protect</a> -->
+          <a href="#">symtoms</a>
+          <a href="#">prevent</a>
+      
+      </div>
+
+      <div class="box">
+          <h3>Contact info</h3>
+          <p> <i class="fas fa-phone"></i> +123-456-7890. </p>
+          <p> <i class="fas fa-envelope"></i> example@gmail.com </p>
+          <p> <i class="fas fa-map-marker-alt"></i> mumbai, india - 400104. </p>
+          <!-- <div class="share">
+              <a href="#" class="fab fa-youtube"></a>
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+          </div> -->
+      </div>
+
+  </div>
+
+  <!-- <h1 class="credit"> created by <a href="#"> mr. web designer </a> all rights reserved! </h1> -->
+
+</section>
+
+<!-- footer section ends -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"crossorigin="anonymous"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWqe0ZLPdHn56prC3X7fOO9EEjhNOTE_8&callback=initMap&libraries=places&v=weekly"
+      async
+    ></script>
+  <!-- custom js file link  -->
+  <script src=".static/js/script.js"></script>
+  <script src=".static/js/map.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,489 @@
+<!-- This is GUI for Heart disease Detection Application Using Machine Learning Classifer -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="keywords"
+      content="htmlcss bootstrap, multi level menu, submenu, treeview nav menu examples"
+    />
+    <title>Sepsis Prediction Website ML API</title>
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="./static/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Old code -->
+    <!-- <link rel="stylesheet" href="./static/css/lab.css" /> -->
+
+    <!-- New CSS -->
+    <link rel="stylesheet" href="./static/css/labtest.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.1/html2pdf.bundle.min.js"
+      integrity="sha512vDKWohFHe2vkVWXHp3tKvIxxXg0pJxeid5eo+UjdjME3DBFBn2F8yWOE0XmiFcFbXxrEOR1JriWEno5Ckpn15A=="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="wrapper">
+        <nav>
+          <input type="checkbox" id="show-search" />
+          <input type="checkbox" id="show-menu" />
+          <label for="show-menu" class="menu-icon" id="menu"
+            ><i class="fas fa-bars"></i
+          ></label>
+          <div class="content">
+            <div class="logo"><a href="http://127.0.0.1:5000/">Sepsis</a></div>
+            <ul class="links">
+              <li><a href="http://127.0.0.1:5000/">Home</a></li>
+              <li><a href="http://127.0.0.1:5000/about">About</a></li>
+              <li>
+                <a href="http://127.0.0.1:5000/" class="desktop-link"
+                  >Rapid Test</a
+                >
+                <input type="checkbox" id="show-features" />
+                <label for="show-features">Rapid Test</label>
+                <ul>
+                  <li>
+                    <a href="http://127.0.0.1:5000/adultstest">For Adults</a>
+                  </li>
+                  <li>
+                    <a href="http://127.0.0.1:5000/childtest">For Children</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="http://127.0.0.1:5000/advancedtest">Advanced Test</a>
+              </li>
+              <li><a href="http://127.0.0.1:5000/labtest">Lab Test</a></li>
+              <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
+              <li><a href="http://127.0.0.1:5000/hiw">How it Works</a></li>
+              <li><a href="http://127.0.0.1:5000/blog">Blogs</a></li>
+              <li><a href="http://127.0.0.1:5000/faq">FAQ</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- header section ends -->
+
+    <section class="labform">
+      <!-- Old code STARTS -->
+
+      <!-- <form action="{{ url_for('predictlab')}}" method="post" id="form-print">
+        <div class="form">
+          <div class="top-form">
+            <h2>Patient Parameters1</h2>
+            <br />
+            <div class="inner-form">
+              <div class="label">HR (Heart Rate)</div>
+              <input
+                type="text"
+                name="HR"
+                placeholder="HR"
+                required="required"
+              />
+            </div>-->
+
+      <!-- New Code STARTS -->
+      <form action="{{ url_for('predictlab')}}" method="post" id="form-print">
+        <div class="title_lab">
+          <h1>LABORATORY TEST</h1>
+        </div>
+        <div class="labtest-form">
+          <div class="label-input-pair">
+            <label class="lab-label">HR (beats per min)</label>
+            <input
+              type="text"
+              name="HR"
+              placeholder="HR"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">O2Sat (Percentage)</label>
+            <input
+              type="text"
+              name="O2Sat"
+              placeholder="O2Sat"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">Temparature (°Celcius)</label>
+            <input
+              type="text"
+              name="Temp"
+              placeholder="Temp"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">SBP (mm Hg)</label>
+            <input
+              type="text"
+              name="SBP"
+              placeholder="SBP"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">MAP (mm Hg)</label>
+            <input
+              type="text"
+              name="MAP"
+              placeholder="MAP"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">DBP (mm Hg)</label>
+            <input
+              type="text"
+              name="DBP"
+              placeholder="DBP"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">Resp (breaths per minute)</label>
+            <input
+              type="text"
+              name="Resp"
+              placeholder="Resp"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">EtCO2 (mm Hg)</label>
+            <input
+              type="text"
+              name="EtCO2"
+              placeholder="EtCO2"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <!-- Demo Fields DELETE -->
+          <div class="label-input-pair">
+            <label class="lab-label">BaseExcess (mmol/L)</label>
+            <input
+              type="text"
+              placeholder="BaseExcess"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">HCO3 (mmol/L)</label>
+            <input
+              type="text"
+              placeholder="HCO3"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">FiO2 (Percentage)</label>
+            <input
+              type="text"
+              placeholder="FiO2"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">pH </label>
+            <input
+              type="text"
+              placeholder="pH"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">PaCO2 (mm Hg)</label>
+            <input
+              type="text"
+              placeholder="PaCO2"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">SaO2 (Percentage)</label>
+            <input
+              type="text"
+              placeholder="SaO2"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">AST (IU/L)</label>
+            <input
+              type="text"
+              placeholder="AST"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">BUN (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="BUN"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">Alkalinephos (IU/L)</label>
+            <input
+              type="text"
+              placeholder="Alkalinephos"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">Calcium (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="Calcium"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Chloride (mmol/L)</label>
+            <input
+              type="text"
+              placeholder="Chloride"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Creatinine (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="Creatinine"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Bilirubin_direct (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="Bilirubin_direct"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Glucose (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="Glucose"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Lactate (mg/dL)</label>
+            <input
+              type="text"
+              placeholder="Lactate"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+          <div class="label-input-pair">
+            <label class="lab-label">Magnesium (mmol/dL)</label>
+            <input
+              type="text"
+              placeholder="Magnesium"
+              required="required"
+              class="lab-input"
+            />
+          </div>
+        </div>
+
+        <div class="remark-sign-pair">
+          <div class="label-input-pair">
+            <label class="lab-label">Remark</label>
+            <textarea
+              type="text"
+              placeholder="Remark"
+              class="remark-textbox"
+              required="required"
+            ></textarea>
+          </div>
+
+          <div class="label-input-pair">
+            <label class="lab-label">Signature</label>
+            <textarea type="text" class="sign-textbox"></textarea>
+          </div>
+        </div>
+
+        <!-- New code ENDS -->
+        <br />
+        <div class="check-btn-div">
+          <button type="submit" class="">Check</button>
+        </div>
+
+        <!-- <button type="submit">
+          Check
+        </button> -->
+        <!-- <input type="button" style="color: blue;" onclick="gen()" value="askjlfdhaklsdfjhas">
+          Check
+        </input> -->
+      </form>
+
+      <div class="pdf-reset-pair">
+        <input
+          type="button"
+          class="pdf-btn"
+          onclick="GeneratePdf();"
+          value="GeneratePdf"
+        />
+
+        <div class="lab-resetbtn">
+          <a href="http://127.0.0.1:5000/labtest">Reset</a>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+
+      <!-- Show button -->
+      <!-- <div class="startbtn"> -->
+      <!-- <button type="submit" onclick="GeneratePdf()" value="GeneratePdf">
+          Check
+        </button> -->
+
+      <!-- </div> -->
+
+      <div class="textmsg">
+        <h2 style="color: #ffffff;">{{ prediction_text }}</h2>
+      </div>
+      <!-- Buttons -->
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+
+      <!-- Show predicted output using ML model -->
+      <!-- <div class="textmsg">
+        <h2>{{ prediction_text }}</h2>
+      </div> -->
+      <br />
+      <br />
+      <br />
+
+      <!-- </div> -->
+    </section>
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <!-- <div class="box">
+          <h3>About us</h3>
+          <p></p>
+      </div> -->
+
+        <!-- <div class="box">
+          <h3>locations</h3>
+          <a href="#">Mumbai</a>
+          <a href="#">pune</a>
+          <a href="#">chennai</a>
+          <a href="#">bangalore</a>
+          <a href="#">hyderabad</a>
+          <a href="#">new delhi</a>
+      </div> -->
+
+        <div class="box">
+          <h3>Quick links</h3>
+          <a href="#">home</a>
+          <!-- <a href="#">protect</a> -->
+          <a href="#">symtoms</a>
+          <a href="#">prevent</a>
+        </div>
+
+        <div class="box">
+          <h3>Contact info</h3>
+          <p><i class="fas fa-phone"></i> +123-456-7890.</p>
+          <p><i class="fas fa-envelope"></i> example@gmail.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> mumbai, india - 400104.</p>
+          <!-- <div class="share">
+              <a href="#" class="fab fa-youtube"></a>
+              <a href="#" class="fab fa-facebook-f"></a>
+              <a href="#" class="fab fa-twitter"></a>
+              <a href="#" class="fab fa-instagram"></a>
+          </div> -->
+        </div>
+      </div>
+
+      <!-- <h1 class="credit"> created by <a href="#"> mr. web designer </a> all rights reserved! </h1> -->
+    </section>
+
+    <!-- footer section ends -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- custom js file link  -->
+    <script src="./static/js/script.js"></script>
+
+    <!-- <script type="text/javascript" src="https://www.pdfmyform.com/js/pdfmyform.js"></script> -->
+  </body>
+</html>

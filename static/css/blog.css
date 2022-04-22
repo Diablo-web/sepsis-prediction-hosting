@@ -1,0 +1,106 @@
+.blog-heading {
+  font-size: 4rem;
+  padding-top: 10rem;
+  text-align: center;
+  color: #000;
+}
+
+.blogs-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 6rem 2rem 0 2rem;
+  gap: 4rem;
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  word-wrap: break-word;
+  width: 450px;
+  height: 400px;
+  /* gap: 1rem; */
+  /* border: 1px solid #000; */
+
+  border-radius: 21px 21px 21px 21px;
+  -moz-border-radius: 21px 21px 21px 21px;
+  -webkit-border-radius: 21px 21px 21px 21px;
+  border: 1px solid #ffffff;
+
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+  box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+}
+
+.blog-media {
+  height: 200px;
+  width: 400px;
+}
+
+.blog-date {
+  padding: 1rem 0 0 1rem;
+  font-size: 1.2rem;
+  color: #469ac1;
+}
+
+.blog-title {
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+  word-wrap: break-all;
+  text-decoration: none;
+  color: #27627E;
+}
+
+.read-more  {
+  align-self: flex-end;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #DD1773;
+}
+
+
+/*media queries*/
+@media screen and (max-width: 480px) {
+   
+    .blog {
+      height: 320px;
+      width: 300px;
+    
+    }
+    .blog-media{
+        height: 300px;
+        width: 250px;
+    }
+  }
+  
+  
+.yt {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  word-wrap: break-word;
+  width: 540px;
+  height: 315px;
+  /* gap: 1rem; */
+  /* border: 1px solid #000; */
+
+  border-radius: 21px 21px 21px 21px;
+  -moz-border-radius: 21px 21px 21px 21px;
+  -webkit-border-radius: 21px 21px 21px 21px;
+  border: 1px solid #ffffff;
+
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+  box-shadow: 10px 10px 23px 0px rgba(191, 191, 191, 0.74);
+}
+
+/* @media screen and (max-width: 480px) {
+.yt {
+  height: 28px;
+  width: 20px;
+
+}
+} */

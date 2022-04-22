@@ -40,7 +40,8 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-  background: #000;
+  /* background: #000; */
+  background: #fff;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -1054,6 +1055,13 @@ nav .content .links {
   color: #333;
 }
 
+/* video in aboutus page */
+.about-video {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact .box-container {
   display: flex;
   justify-content: center;
@@ -1187,6 +1195,7 @@ nav .content .links {
 .accordian .image-box {
   height: 360px;
   width: 400px;
+  margin-top: 15%;
   margin-right: 20%;
   /* margin-left: auto; */
 }
@@ -1215,6 +1224,7 @@ nav .content .links {
 
 .faq-text::-webkit-scrollbar {
   display: none;
+ 
 }
 
 .accordian .accordian-text li {
@@ -1260,7 +1270,7 @@ nav .content .links {
 }
 .accordian-text li p {
   width: 92%;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: #595959;
   display: none;
@@ -1285,17 +1295,18 @@ nav .content .links {
     flex-direction: column;
   }
   .accordian .image-box {
-    margin-top: 20%;
-    height: 360px;
+    margin-top: 10%;
+    height: 400px;
     width: 300px;
-    background: #9e65e9;
+    margin-left: 20%;
+    /* background: #9e65e9; */
     width: 100%;
     border-radius: 25px;
     padding: 30px;
   }
   .accordian .accordian-text {
     width: 100%;
-    margin-top: 30px;
+    margin-top: -100px;
   }
 }
 
@@ -1564,9 +1575,10 @@ nav .content .links {
   background: lightcyan;
   box-sizing: border-box;
   width: 75%;
-  border: 2px solid grey;
-  border-radius: 2px;
+  border: 1px solid grey;
+  border-radius: 5px;
   outline: none;
+  width: 25rem;
   transition: all 0.3s ease;
 }
 
@@ -1580,6 +1592,7 @@ nav .content .links {
   margin-bottom: 5px;
   text-transform: capitalize;
   font-size: medium;
+  font-weight: 600;
 }
 
 .top-form .inner-form {
@@ -1755,19 +1768,22 @@ nav .content .links {
 } */
 
 .textmsg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 50px;
-  font-size: 15px;
+  font-size: 2.5rem;
   font-weight: 400;
   margin: auto;
-  width: 450px;
-  color: #007bff;
+  width: 600px;
+  height: 350px;
+  color: #ffffff;
   text-align: center;
-  padding: 25px 30px;
+  padding: 25px 25px;
   outline: none;
   border: none;
   border-radius: 5px;
   background: lightskyblue;
-  cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   /* z-index: -1; */
 }
@@ -1830,6 +1846,11 @@ nav .content .links {
     width: 250px;
   }
 }
+/* maps */
+/* #map {
+  height: 100%;
+} */
+
 
 /*howit works css*/
 
