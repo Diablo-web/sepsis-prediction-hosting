@@ -9,3 +9,4 @@ scikit-plot==0.3.7
 seaborn==0.10.1
 sklearn==0.0
 xgboost==0.90
+gunicorn==19.9.0
