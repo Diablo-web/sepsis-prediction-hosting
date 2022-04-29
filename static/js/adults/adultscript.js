@@ -20,7 +20,7 @@ exit_btn.onclick = () => {
 // if continueQuiz button clicked
 continue_btn.onclick = () => {
   info_box.classList.remove("activeInfo"); //hide info box
-  quiz_box.classList.add("activeQuiz"); //show quiz box
+  quiz_box.classList.add("activeQuiz");
   showQuetions(0); //calling showQestions function
   queCounter(1); //passing 1 parameter to queCounter
 };
@@ -37,7 +37,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // if restartQuiz button clicked
 restart_quiz.onclick = () => {
-  quiz_box.classList.add("activeQuiz"); //show quiz box
+  quiz_box.classList.add("activeQuiz"); 
   result_box.classList.remove("activeResult"); //hide result box
 
   que_count = 0;
@@ -106,8 +106,7 @@ function showQuetions(index) {
 
       
   }
-  // + '<div class="option"><span>'+ questions[index].options[2] +'</span></div>'
-  // + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
+
   que_text.innerHTML = que_tag; //adding new span tag inside que_tag
   option_list.innerHTML = option_tag; //adding new div tag inside option_tag
 
@@ -124,12 +123,12 @@ function optionSelected(answer) {
   clearInterval(counter); //clear counter
   clearInterval(counterLine); //clear counterLine
   let userAns = answer.textContent; //getting user selected option
-  let correcAns = questions[que_count].answer; //getting correct answer from array
+  let correcAns = questions[que_count].answer; 
   const allOptions = option_list.children.length; //getting all option items
 
   if (userAns == correcAns) {
-    //if user selected option is equal to array's correct answer
-    userScore += 1; //upgrading score value with 1
+    
+    userScore += 1; 
 
     console.log("Correct Answer");
     console.log("Your correct answers = " + userScore);
@@ -145,20 +144,17 @@ function optionSelected(answer) {
 function showResult() {
   info_box.classList.remove("activeInfo"); //hide info box
   quiz_box.classList.remove("activeQuiz"); //hide quiz box
-  result_box.classList.add("activeResult"); //show result box
+  result_box.classList.add("activeResult"); 
   const scoreText = result_box.querySelector(".score_text");
   if (userScore > 6) {
-    // if user scored more than 3
-    //creating a new span tag and passing the user score number and total question number
     let scoreTag =
       '<span style="text-align: center">The answers you have given to this test suggest that you might be having sepsis. <br/>However, the test only looks at some of the most common symptoms , more specific symptoms that are not covered here. <br/>We recommend you to take the Advanced Test </span>';
-    scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
+    scoreText.innerHTML = scoreTag; 
   } else if (userScore === 5) {
     let scoreTag =
       "<span>  The answers you have given to this test suggest that you might not be having sepsis.</span>";
     scoreText.innerHTML = scoreTag;
   } else {
-    // if user scored less than 1
     let scoreTag = "<span>You are safe</span>";
     scoreText.innerHTML = scoreTag;
   }

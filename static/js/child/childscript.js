@@ -20,7 +20,7 @@ exit_btn.onclick = () => {
 // if continueQuiz button clicked
 continue_btn.onclick = () => {
   info_box.classList.remove("activeInfo"); //hide info box
-  quiz_box.classList.add("activeQuiz"); //show quiz box
+  quiz_box.classList.add("activeQuiz");
   showQuetions(0); //calling showQestions function
   queCounter(1); //passing 1 parameter to queCounter
 };
@@ -37,7 +37,7 @@ const quit_quiz = result_box.querySelector(".buttons .quit");
 
 // if restartQuiz button clicked
 restart_quiz.onclick = () => {
-  quiz_box.classList.add("activeQuiz"); //show quiz box
+  quiz_box.classList.add("activeQuiz");
   result_box.classList.remove("activeResult"); //hide result box
 
   que_count = 0;
@@ -106,7 +106,7 @@ function showQuetions(index) {
     }
 
    
-  // + '<div class="option"><span>'+ questions[index].options[3] +'</span></div>';
+
   que_text.innerHTML = que_tag; //adding new span tag inside que_tag
   option_list.innerHTML = option_tag; //adding new div tag inside option_tag
 
@@ -123,7 +123,7 @@ function optionSelected(answer) {
   clearInterval(counter); //clear counter
   clearInterval(counterLine); //clear counterLine
   let userAns = answer.textContent; //getting user selected option
-  let correcAns = questions[que_count].answer; //getting correct answer from array
+  let correcAns = questions[que_count].answer; 
   const allOptions = option_list.children.length; //getting all option items
 
   if (userAns == correcAns) {
@@ -136,40 +136,38 @@ function optionSelected(answer) {
     console.log("Wrong Answer");
   }
   for (i = 0; i < allOptions; i++) {
-    option_list.children[i].classList.add("disabled"); //once user select an option then disabled all options
+    option_list.children[i].classList.add("disabled");
   }
-  next_btn.classList.add("show"); //show the next button if user selected any option
+  next_btn.classList.add("show");
 }
 
 function showResult() {
-  info_box.classList.remove("activeInfo"); //hide info box
-  quiz_box.classList.remove("activeQuiz"); //hide quiz box
-  result_box.classList.add("activeResult"); //show result box
+  info_box.classList.remove("activeInfo"); 
+  quiz_box.classList.remove("activeQuiz"); 
+  result_box.classList.add("activeResult");
   const scoreText = result_box.querySelector(".score_text");
   if (userScore > 3) {
-    // if user scored more than 3
-    //creating a new span tag and passing the user score number and total question number
+    
     let scoreTag =
       '<span style="text-align: center">The answers you have given to this test suggest that your child might have sepsis. <br/>However, the test only looks at some of the most common symptoms , more specific symptoms that are not covered here. <br/>We recommend you to take the Advanced Test </span>';
-    scoreText.innerHTML = scoreTag; //adding new span tag inside score_Text
+    scoreText.innerHTML = scoreTag; 
   } else if (userScore === 3) {
     let scoreTag =
       "<span>The answers you have given to this test suggest that your child might not have sepsis.</span>";
     scoreText.innerHTML = scoreTag;
   } else {
-    // if user scored less than 1
     let scoreTag = "<span>Your child is safe</span>";
     scoreText.innerHTML = scoreTag;
   }
 }
 
 function queCounter(index) {
-  //creating a new span tag and passing the question number and total question
+ 
   let totalQueCounTag =
     "<span><p>" +
     index +
     "</p> of <p>" +
     questions.length +
     "</p> Questions</span>";
-  bottom_ques_counter.innerHTML = totalQueCounTag; //adding new span tag inside bottom_ques_counter
+  bottom_ques_counter.innerHTML = totalQueCounTag;
 }

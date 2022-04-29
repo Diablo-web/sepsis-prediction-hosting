@@ -1,4 +1,4 @@
-<!-- This is GUI for Heart disease Detection Application Using Machine Learning Classifer -->
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,15 +17,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
     <!-- custom css file link  -->
     <link rel="stylesheet" href="./static/css/style.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!-- Old code -->
-    <!-- <link rel="stylesheet" href="./static/css/lab.css" /> -->
 
-    <!-- New CSS -->
+
+ 
     <link rel="stylesheet" href="./static/css/labtest.css" />
 
     <script
@@ -68,7 +67,7 @@
                 <a href="http://127.0.0.1:5000/advancedtest">Advanced Test</a>
               </li>
               <li><a href="http://127.0.0.1:5000/labtest">Lab Test</a></li>
-              <li><a href="http://127.0.0.1:5000/#contact">Contact</a></li>
+              
               <li><a href="http://127.0.0.1:5000/hiw">How it Works</a></li>
               <li><a href="http://127.0.0.1:5000/blog">Blogs</a></li>
               <li><a href="http://127.0.0.1:5000/faq">FAQ</a></li>
@@ -81,24 +80,8 @@
     <!-- header section ends -->
 
     <section class="labform">
-      <!-- Old code STARTS -->
-
-      <!-- <form action="{{ url_for('predictlab')}}" method="post" id="form-print">
-        <div class="form">
-          <div class="top-form">
-            <h2>Patient Parameters1</h2>
-            <br />
-            <div class="inner-form">
-              <div class="label">HR (Heart Rate)</div>
-              <input
-                type="text"
-                name="HR"
-                placeholder="HR"
-                required="required"
-              />
-            </div>-->
-
-      <!-- New Code STARTS -->
+     
+     
       <form action="{{ url_for('predictlab')}}" method="post" id="form-print">
         <div class="title_lab">
           <h1>LABORATORY TEST</h1>
@@ -192,7 +175,7 @@
             />
           </div>
 
-          <!-- Demo Fields DELETE -->
+         
           <div class="label-input-pair">
             <label class="lab-label">BaseExcess (mmol/L)</label>
             <input
@@ -365,18 +348,13 @@
           </div>
         </div>
 
-        <!-- New code ENDS -->
+      
         <br />
         <div class="check-btn-div">
           <button type="submit" class="">Check</button>
         </div>
 
-        <!-- <button type="submit">
-          Check
-        </button> -->
-        <!-- <input type="button" style="color: blue;" onclick="gen()" value="askjlfdhaklsdfjhas">
-          Check
-        </input> -->
+       
       </form>
 
       <div class="pdf-reset-pair">
@@ -392,15 +370,7 @@
         </div>
       </div>
 
-      <!-- Buttons -->
-
-      <!-- Show button -->
-      <!-- <div class="startbtn"> -->
-      <!-- <button type="submit" onclick="GeneratePdf()" value="GeneratePdf">
-          Check
-        </button> -->
-
-      <!-- </div> -->
+      
 
       <div class="textmsg">
         <h2 style="color: #ffffff;">{{ prediction_text }}</h2>
@@ -421,10 +391,7 @@
       <br />
       <br />
 
-      <!-- Show predicted output using ML model -->
-      <!-- <div class="textmsg">
-        <h2>{{ prediction_text }}</h2>
-      </div> -->
+      
       <br />
       <br />
       <br />
@@ -435,27 +402,13 @@
 
     <section class="footer">
       <div class="box-container">
-        <!-- <div class="box">
-          <h3>About us</h3>
-          <p></p>
-      </div> -->
-
-        <!-- <div class="box">
-          <h3>locations</h3>
-          <a href="#">Mumbai</a>
-          <a href="#">pune</a>
-          <a href="#">chennai</a>
-          <a href="#">bangalore</a>
-          <a href="#">hyderabad</a>
-          <a href="#">new delhi</a>
-      </div> -->
+       
 
         <div class="box">
           <h3>Quick links</h3>
-          <a href="#">home</a>
-          <!-- <a href="#">protect</a> -->
-          <a href="#">symtoms</a>
-          <a href="#">prevent</a>
+        <a href="http://127.0.0.1:5000/">Home</a>
+        <a href="http://127.0.0.1:5000/adultstest">Protect</a>
+        <a href="http://127.0.0.1:5000/about">Symtoms</a>  
         </div>
 
         <div class="box">
@@ -463,16 +416,11 @@
           <p><i class="fas fa-phone"></i> +123-456-7890.</p>
           <p><i class="fas fa-envelope"></i> example@gmail.com</p>
           <p><i class="fas fa-map-marker-alt"></i> mumbai, india - 400104.</p>
-          <!-- <div class="share">
-              <a href="#" class="fab fa-youtube"></a>
-              <a href="#" class="fab fa-facebook-f"></a>
-              <a href="#" class="fab fa-twitter"></a>
-              <a href="#" class="fab fa-instagram"></a>
-          </div> -->
+         
         </div>
       </div>
 
-      <!-- <h1 class="credit"> created by <a href="#"> mr. web designer </a> all rights reserved! </h1> -->
+      
     </section>
 
     <!-- footer section ends -->
@@ -483,7 +431,8 @@
     ></script>
     <!-- custom js file link  -->
     <script src="./static/js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
 
-    <!-- <script type="text/javascript" src="https://www.pdfmyform.com/js/pdfmyform.js"></script> -->
+    
   </body>
 </html>
