@@ -75,7 +75,7 @@ lightgbm==2.3.1
 llvmlite==0.36.0
 Mako==1.1.4
 MarkupSafe==2.0.1
-matplotlib @ file:///C:/ci/matplotlib-base_1592846084747/work
+matplotlib 
 matplotlib-inline==0.1.2
 missingno==0.5.0
 mistune==0.8.4
